@@ -11,3 +11,7 @@
 /log/*
 !/log/.keep
 /tmp
+
+#ignore databases and secrets
+/config/database.yml
+/config/secret_token.rb
