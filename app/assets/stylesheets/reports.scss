@@ -1,0 +1,24 @@
+// Place all the styles related to the reports controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#logo {
+	max-width: 300px;
+	max-height: 150px;
+}
+
+h1 {
+	font-family: 'Alegreya', serif;
+	font-size: 4em;
+}
+
+h2 {
+	font-family: 'Alegreya', serif;
+	font-size: 1.3em;
+	text-align: center;
+}
+
+#header {
+	width: 100%;
+	background-color: #eeeeee;
+}
