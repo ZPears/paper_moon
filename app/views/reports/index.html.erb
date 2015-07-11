@@ -9,10 +9,19 @@
 <% end %>
 </div>
 
-<br><br>
-
-<%= link_to "Full Report as PDF", reports_path(@reports, :format => "pdf") %> 
-
-<%= link_to "Add New Report", new_report_path %>
-
-<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+<table id="footer">
+	<tr>
+		<td>	
+			<%= current_user.email %>
+		</td>
+		<td>
+			<%= link_to "Full Report as PDF", reports_path(@reports, :format => "pdf") %>
+		</td>
+		<td>
+			<%= link_to "Add New Report", new_report_path %>
+		</td>
+		<td>
+			<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+		</td>
+	</tr>
+</table>

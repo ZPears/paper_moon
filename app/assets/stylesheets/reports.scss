@@ -18,9 +18,19 @@ h2 {
 	text-align: center;
 }
 
-#header {
+#header, #footer {
 	width: 100%;
-	background-color: #eeeeee;
+	background-color: #dddddd;
+}
+
+#footer {
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+#footer tr td {
+	font-weight: bold;
+	width: 25%;
 }
 
 #enter_url {
