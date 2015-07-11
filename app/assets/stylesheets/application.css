@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+.alert {
+	text-align: center;
+}
+
+.alert-success {
+	color: green;
+	font-weight: bold;
+}
+
+.alert-danger {
+	color: red;
+	font-weight: bold;
+}
+
+form {
+	text-align: center;
+}
+
+.devise_links {
+	text-align: center;
+}
