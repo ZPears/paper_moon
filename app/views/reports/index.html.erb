@@ -4,13 +4,13 @@
 <% @reports.each do |report| %>
 	<% doc = Nokogiri::HTML(open(report.url)) %>
 	<strong><%= doc.at_css("h1").text %></strong><br><br>
-	<%= doc.at_css("p").text %><br><br>
+	<%= doc.at_css("p:first-of-type").text %><br><br>
 <% end %>
 </div>
 
 <br><br>
 
-<%= link_to "Full Report as PDF", "/reports.pdf" %> 
+<%= link_to "Full Report as PDF", reports_path(@reports, :format => "pdf") %> 
 
 <%= link_to "Add New Report", new_report_path %>
 
