@@ -27,6 +27,10 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'nokogiri'
 
+gem 'prawn'
+
+gem 'prawnto'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
