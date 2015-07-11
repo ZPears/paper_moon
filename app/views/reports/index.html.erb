@@ -1,6 +1,6 @@
 <%= form_for :url, :html => { :id => "enter_url", :onsubmit=>"submitted(); return false;" } do |f| %>
-	<br><br>URL: <br><br><%= f.text_field :url %><br><br>
-	<%= f.submit "GO!" %>
+	<br><br>Enter URL: <br><br><%= f.text_field :url %><br><br>
+	<%= f.submit "Generate!" %>
 <% end %>
 <br><br><br>
 <h2 id="result">Results will go here.</h2>
