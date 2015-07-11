@@ -19,8 +19,10 @@ class ReportsController < ApplicationController
 		@report.user_id = current_user.id
 
 		if @report.save
-			render action: "index"
+			flash[:notice] = "Successfully Added!"
+			render action: "new"
 		else
+			flash[:alert] = "An Error Occured."
 			render action: "new"
 		end
 	end

@@ -1,4 +1,4 @@
-pdf.text "Report for #{current_user.email}", :size => 20, :style => :bold
+pdf.text "Report for user: #{current_user.email}", :size => 20, :style => :bold
 
 pdf.move_down(30)
 
