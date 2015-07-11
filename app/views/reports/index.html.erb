@@ -5,6 +5,7 @@
 	<% doc = Nokogiri::HTML(open(report.url)) %>
 	<strong><%= doc.at_css("h1").text %></strong><br><br>
 	<%= doc.at_css("p:first-of-type").text %><br><br>
+	<%= button_to 'Delete Report', report_path(report), method: :delete, data: { confirm: 'Are you sure?' } %><br><br>
 <% end %>
 </div>
 

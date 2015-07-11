@@ -25,6 +25,13 @@ class ReportsController < ApplicationController
 		end
 	end
 
+	def destroy
+		@report = Report.find(params[:id])
+		@report.destroy
+
+		redirect_to reports_path
+	end
+
 private
 	def report_params
 		params.require(:report).permit(:url, :user_id)
