@@ -1,8 +1,14 @@
-<%= form_for :url, :html => { :id => "enter_url", :onsubmit=>"submitted(); return false;" } do |f| %>
-	<br><br>Enter URL: <br><br><%= f.text_field :url %><br><br>
-	<%= f.submit "Generate!" %>
+<h2>Reports</h2>
+
+<% @reports.each do |report| %>
+	<% doc = Nokogiri::HTML(open(report.url)) %>
+	<strong><%= doc.at_css("h1").text %></strong><br><br>
+	<%= doc.at_css("p").text %><br><br>
+
 <% end %>
-<br><br><br>
-<h2 id="result">Results will go here.</h2>
+
+<br><br>
+
+<%= link_to "Add New Report", new_report_path %>
 
 <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
