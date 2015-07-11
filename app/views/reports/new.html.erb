@@ -1,0 +1,9 @@
+<%= form_for :report, url: reports_path, :html => { :id => "enter_url" } do |f| %>
+	<br><br>Enter URL: <br><br><%= f.text_field :url %><br><br>
+	<%= f.submit "Add!" %>
+<% end %>
+<br><br><br>
+
+<%= link_to "My Reports", reports_path %>
+
+<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
